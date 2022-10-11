@@ -1,6 +1,11 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Card from './Card';
 
 const Home = () => {
+
+  const { data } = useLoaderData()
+
   return (
     <div>
       <section>
@@ -15,8 +20,17 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <div className='grid lg:grid-cols-4 grid-cols-1 gap-5 p-5'>
+        {
+          data.map(card => <Card key={card.id} card={card}></Card>)
+        }
+      </div>
     </div>
   );
 };
 
 export default Home;
+
+
+
+
