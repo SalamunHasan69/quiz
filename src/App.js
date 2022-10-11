@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Blog from './components/Blog';
+import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
 import Layouts from './components/Layouts';
 import Rechart from './components/Rechart';
@@ -11,6 +12,7 @@ function App() {
     {
       path: '/',
       element: <Layouts></Layouts>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
           path: '/',
@@ -23,7 +25,7 @@ function App() {
         {
           path: '/rechart',
           element: <Rechart></Rechart>,
-          loader: () => fetch('https://api.itbook.store/1.0/new'),
+          loader: () => fetch(' https://openapi.programming-hero.com/api/quiz'),
         },
         {
           path: '/blog',

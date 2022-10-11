@@ -13,7 +13,7 @@ const Rechart = () => {
           Re<span className="dark:text-violet-400">chart</span>
         </h2>
         <LineChart data={loaderData} className='w-[500] h-[400]'>
-          <Line type="monotone" dataKey="" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="total" stroke="#82ca9d" />
           <XAxis dataKey="name" />
           <YAxis />
         </LineChart>
