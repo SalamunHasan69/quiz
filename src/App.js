@@ -22,7 +22,8 @@ function App() {
         },
         {
           path: '/rechart',
-          element: <Rechart></Rechart>
+          element: <Rechart></Rechart>,
+          loader: () => fetch('https://api.itbook.store/1.0/new'),
         },
         {
           path: '/blog',
