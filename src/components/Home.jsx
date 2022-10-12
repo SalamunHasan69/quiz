@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Card from './Card';
+import Quiz from './Quiz';
 
 const Home = () => {
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ card }) => {
 
-  const { logo, name, total } = card
+  const { logo, name, total, id } = card
 
   return (
     <div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100 w-4/5 mx-auto">
@@ -13,7 +13,7 @@ const Card = ({ card }) => {
           <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
           <small className='flex justify-end'>Question: {total}</small>
         </div>
-        <Link to='/quiz' type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900">Quiz</Link>
+        <Link to={`/quiz/${id}`} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900">Quiz</Link>
       </div>
     </div>
   );
