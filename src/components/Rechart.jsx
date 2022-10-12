@@ -1,10 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis } from 'recharts';
+import { Line, LineChart, XAxis, YAxis } from 'recharts';
 
 const Rechart = () => {
 
-  const loaderData = useLoaderData()
+  const data = useLoaderData().data
 
   return (
     <div>
@@ -12,9 +12,10 @@ const Rechart = () => {
         <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">
           Re<span className="dark:text-violet-400">chart</span>
         </h2>
-        <LineChart data={loaderData} className='w-[500] h-[400]'>
-          <Line type="monotone" dataKey="total" stroke="#82ca9d" />
-          <XAxis dataKey="name" />
+        <LineChart data={data}
+          className='w-[500] h-[400]'>
+          <Line type="monotone" stroke="#82ca9d" />
+          <XAxis dataKey={data.total} />
           <YAxis />
         </LineChart>
       </div>

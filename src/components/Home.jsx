@@ -1,11 +1,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Card from './Card';
+// import Quiz from './Quiz';
 
 const Home = () => {
 
-  const { data } = useLoaderData()
-
+  const data = useLoaderData()
+  console.log(data);
   return (
     <div>
       <section>
@@ -20,10 +21,13 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className='grid lg:grid-cols-4 grid-cols-1 gap-5 p-5'>
+      <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-4 p-5 mb-10'>
         {
-          data.map(card => <Card key={card.id} card={card}></Card>)
+          data?.data?.map(card => <Card key={card.id} card={card}></Card>)
         }
+        {/* {
+          data.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
+        } */}
       </div>
     </div>
   );
