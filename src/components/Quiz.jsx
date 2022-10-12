@@ -1,15 +1,12 @@
-// import React from 'react';
+import React from 'react';
 
-// const Quiz = () => {
+const Quiz = () => {
 
-//   const { logo } = quiz;
+  return (
+    <div>
+      <h1>Hello</h1>
+    </div>
+  );
+};
 
-
-//   return (
-//     <div>
-
-//     </div>
-//   );
-// };
-
-// export default Quiz;
+export default Quiz;
